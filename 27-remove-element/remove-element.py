@@ -1,6 +1,9 @@
 class Solution(object):
     def removeElement(self, nums, val):
-        while val in nums:
-            nums.remove(val)
+        i = 0
+        while i < len(nums):
+            if nums[i] == val:
+                nums.pop(i)  # Remove element
+            else:
+                i += 1
         return len(nums)
-        
