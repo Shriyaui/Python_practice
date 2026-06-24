@@ -1,8 +1,11 @@
-class Solution(object):
+class Solution:
     def twoSum(self, nums, target):
-        d = {}
+        mp = {}
 
-        for i, n in enumerate(nums):
-            if target - n in d:
-                return [d[target - n], i]
-            d[n] = i  
+        for i, num in enumerate(nums):
+            rem = target - num
+
+            if rem in mp:
+                return [mp[rem], i]
+
+            mp[num] = i
